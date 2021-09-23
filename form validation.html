@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Form Validation</title>
+    <style>
+        td {
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+        
+        input:invalid {
+            color: tomato;
+        }
+        
+        input:valid {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="border: 3px solid black; padding: 5px; text-align: center">
+        <h3>SignUp &nbspForm</h3>
+        <form>
+            <table style="margin-left: auto; margin-right: auto">
+                <tr>
+                    <td><label for="name">Full Name :</label></td>
+                    <td><input type="text" id="name" name="Full Name" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="Mobile Number">Mobile Number : </label></td>
+                    <td>
+                        <input type="text" pattern="[0-9]{10}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Email">Email Id : </label></td>
+                    <td><input type="email" name="Email id" id="email" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="Password">Create Password : </label></td>
+                    <td>
+                        <input pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s)*$" required type="password" class="validate" title="Password must contain uppercase, lowercase & numbers " />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <a href="form validation.html"></a><button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
